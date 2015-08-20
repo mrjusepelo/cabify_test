@@ -12,20 +12,20 @@
 						<td>{{$index + 1}}</td>
 						<td>{{product.name}}</td>
 						<td>{{product.quantity}}</td>
-						<td>{{product.price}} €</td>
-						<td>{{product.price * product.quantity}} €</td>
-						<td>{{product.discount}} €</td>
+						<td>{{product.price | number:2}} €</td>
+						<td>{{product.price * product.quantity | number:2}} €</td>
+						<td>{{product.discount | number:2}} €</td>
 					</tr>
 					<tr><td colspan="6"></td></tr>
 					<tr>
 						<td colspan="4"></td>
 						<td>Total without Discount</td>
-						<td>{{saleCtl.total_not_discount_payment}} €</td>
+						<td>{{saleCtl.total_not_discount_payment | number:2}} €</td>
 					</tr>					
 					<tr>
 						<td colspan="4"></td>
 						<td>Total to Pay</td>
-						<td>{{saleCtl.total_payment}} €</td>
+						<td>{{saleCtl.total_payment | number:2}} €</td>
 					</tr>
 				</table>			
 			</div>
