@@ -16,7 +16,6 @@
 		this.addToCart = function(product){
 			self.total_payment = 0;
 			self.total_not_discount_payment = 0;
-			//			debugger;
 			var auxTotal = 0;
 			var auxTotalDiscount = 0;
 			var auxDiscountProduct = 0;
@@ -25,7 +24,6 @@
 			var auxTotalNotDiscountPayement = 0;
 
 			if (self.saveProducts.length == 0 && product.quantity > 0) {
-				//				debugger
 
 				self.saveProducts.push(product);
 				response_calculates = self.calculateTotal();
@@ -77,7 +75,6 @@
 				}
 
 			};
-//								debugger;
 			
 			$.each(self.saveProducts, function(i, obj){
 				auxTotalPayement += obj.discount;
